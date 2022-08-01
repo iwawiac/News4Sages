@@ -16,8 +16,9 @@ public class ArticlesUtility {
     // Creates request URL to Top Headlines endpoint from specified parameters and API key.
     public static URL createURLTopHeadlines(String country, String category, String APIKey) throws MalformedURLException {
         String endpoint = "https://newsapi.org/v2/top-headlines";
-        return new URL(endpoint + country + category + "&apiKey=" + APIKey);
+        return new URL(endpoint + country + category + "&pageSize=100&apiKey=" + APIKey);
     }
+
     // Connects to news API using URL from createURLTopHeadlines, downloads a string with content
     // and transforms it into JsonObject for further processing using gson library
     public static JsonObject getJsonFromAPIRequest(URL request) throws IOException {
