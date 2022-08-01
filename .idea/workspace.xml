@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="27a8d642-b6ab-4737-bcb1-fc1529561497" name="Changes" comment="changed Junit version to 4.13.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ArticlesUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ArticlesUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ArticlesUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ArticlesUtilityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArticlesUtilityTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="News4Sages" />
@@ -96,9 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ArticlesUtilityTest" />
         <item itemvalue="JUnit.ArticlesUtilityTest.createURLTopHeadlines" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659283176492</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed Junit version to 4.13.2">
+      <created>1659371591508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659371591508</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

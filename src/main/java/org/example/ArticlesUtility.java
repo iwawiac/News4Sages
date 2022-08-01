@@ -13,14 +13,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class ArticlesUtility {
-
-    // test
-
+    // Creates request URL to Top Headlines endpoint from specified parameters and API key.
     public static URL createURLTopHeadlines(String country, String category, String APIKey) throws MalformedURLException {
         String endpoint = "https://newsapi.org/v2/top-headlines";
         return new URL(endpoint + country + category + "&apiKey=" + APIKey);
     }
-
+    // Connects to news API using URL from createURLTopHeadlines, downloads a string with content
+    // and transforms it into JsonObject for further processing using gson library
     public static JsonObject getJsonFromAPIRequest(URL request) throws IOException {
         Scanner scanner = new Scanner(request.openStream(), StandardCharsets.UTF_8.toString());
         scanner.useDelimiter("\\A");
@@ -29,6 +28,9 @@ public class ArticlesUtility {
         scanner.close();
         return requestJsonObject;
     }
+    // Parses Json file from getJsonFromAPIRequest using gson library, extracts JsonArray of articles
+    // and gets title, author and description, then creates a string of format title:description:author + /n
+    // and writes it to string builder, returns the final string to be written into a file.
 
     public static String getArticlesFromJson(JsonObject json) {
         JsonArray articlesArray = json.get("articles").getAsJsonArray();
@@ -40,6 +42,8 @@ public class ArticlesUtility {
             String articleAuthor;
             String articleDescription;
 
+            // if title, author or description is null - UnsupportedOperationException is thrown and
+            // is replaced by "blank"
             try {
                 articleTitle = articlesArray.get(i).getAsJsonObject().get("title").getAsString();
             } catch (UnsupportedOperationException e) {
@@ -62,6 +66,7 @@ public class ArticlesUtility {
         return articles.toString();
     }
 
+    // writes a string from getArticlesFromJson to FileName in root
     public static void writeArticlesToFile(String articlesToWrite, String FileName) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(FileName));
         writer.write(articlesToWrite);
