@@ -15,7 +15,7 @@ public class ArticlesUtilityTest {
 
     @org.junit.Test
     public void givenRequestParameters_createURLTopHeadlines_checkIfURLCorrect() throws Exception {
-        URL expectedURL = new URL("https://newsapi.org/v2/top-headlines?country=pl&category=business&apiKey=d6ef985e19c648239c89d506a2f00739");
+        URL expectedURL = new URL("https://newsapi.org/v2/top-headlines?country=pl&category=business&pageSize=100&apiKey=d6ef985e19c648239c89d506a2f00739");
 
         URL actualURL = ArticlesUtility.createURLTopHeadlines("?country=pl", "&category=business", "d6ef985e19c648239c89d506a2f00739");
 

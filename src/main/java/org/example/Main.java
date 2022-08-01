@@ -18,14 +18,14 @@ public class Main {
         String articles = ArticlesUtility.getArticlesFromJson(json);
 
         System.out.println("Creating file with news...");
-        String outputFile = "Poland_Business_News.txt";
-        ArticlesUtility.writeArticlesToFile(articles, outputFile);
+        String outputFileName = "Poland_Business_News.txt";
+        ArticlesUtility.writeArticlesToFile(articles, outputFileName);
 
-        // for pretty printing in console
+//         for pretty printing in console
 //        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //        String articlesToPring = gson.toJson(json);
 //        System.out.println(articlesToPring);
 
-        System.out.println(json.get("totalResults") + " articles Were written to the file " + outputFile + "\nExiting program...");
+        System.out.println(json.get("totalResults") + " articles Were written to the file " + outputFileName + "\nExiting program...");
     }
 }
